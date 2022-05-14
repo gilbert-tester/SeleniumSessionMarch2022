@@ -23,6 +23,8 @@ public class FluentWaitConcept {
 		driver = new ChromeDriver();
 
 		driver.get("https://opensource-demo.orangehrmlive.com/");
+		
+		driver.findElement(By.id("txtUsername")).sendKeys("Admin");
 
 //		String title = driver.getTitle();
 //
