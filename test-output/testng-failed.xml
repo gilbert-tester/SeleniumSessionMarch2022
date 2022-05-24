@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="com.qa.company.testNG.ListenerDemo"/>
+    <listener class-name="com.qa.company.rerport.ExtentReportListeners"/>
+    <listener class-name="com.qa.company.rerport.TestAllureListeners"/>
+  </listeners>
+  <test thread-count="5" name="Ebay Test(failed)">
+    <parameter name="browser" value="FIREFOX"/>
+    <parameter name="url" value="https://www.ebay.com"/>
+    <classes>
+      <class name="com.qa.company.tests.EbayTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="eBayTitleTest"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.qa.company.tests.EbayTest -->
+    </classes>
+  </test> <!-- Ebay Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
