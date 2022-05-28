@@ -25,6 +25,7 @@ com/qa/company/dataprovider/ReadExcel.class
 com/qa/company/dataprovider/ExcelDataProvider.class
 com/qa/company/drivermanager/DriverManager.class
 com/qa/company/advanceSelenium/ScreenShotMethod.class
+com/qa/company/constant/Constant.class
 com/qa/company/testNG_DataProvider/ExcelDataProvider.class
 com/qa/company/testNG/InvocationCountDemo.class
 com/qa/company/testNG/OrangeHRMTest.class

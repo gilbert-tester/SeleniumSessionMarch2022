@@ -51,12 +51,12 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>testng.xml</span>
+                    <span>testng_regression.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-Suite" class="navigator-link ">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -105,6 +105,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.qa.company.tests.AmazonTest" class="method navigator-link" hash-for-method="amazonTitleTest">amazonTitleTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.qa.company.tests.EbayTest" class="method navigator-link" hash-for-method="eBayTitleTest">eBayTitleTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -134,26 +139,50 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.qa.company.tests.EbayTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="eBayTitleTest">
+                  </a> <!-- eBayTitleTest -->
+                  <span class="method-name">eBayTitleTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/Volumes/Giana/Eclipse-Project_March2022/SeleniumSessionMarch2022/testng.xml</span>
+            <span class="header-content">/Volumes/Giana/Eclipse-Project_March2022/SeleniumSessionMarch2022/src/main/resources/testRunners/testng_regression.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+&lt;suite thread-count=&quot;4&quot; parallel=&quot;tests&quot; name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.qa.company.testNG.ListenerDemo&quot;/&gt;
+    &lt;listener class-name=&quot;com.qa.company.rerport.ExtentReportListeners&quot;/&gt;
+    &lt;listener class-name=&quot;com.qa.company.rerport.TestAllureListeners&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Amazon Test&quot; verbose=&quot;0&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;parameter name=&quot;url&quot; value=&quot;https://www.amazon.com&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.qa.company.tests.AmazonTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test --&gt;
+  &lt;/test&gt; &lt;!-- Amazon Test --&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Ebay Test&quot; verbose=&quot;0&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;FIREFOX&quot;/&gt;
+    &lt;parameter name=&quot;url&quot; value=&quot;https://www.ebay.com&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.qa.company.tests.EbayTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Ebay Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -165,7 +194,10 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (1 class)</span>
+                <span class="test-name">Amazon Test (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Ebay Test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -191,16 +223,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'amazonTitleTest')
-data.setCell(0, 2, 'com.qa.company.tests.AmazonTest')
-data.setCell(0, 3, 129);
+data.setCell(0, 1, 'eBayTitleTest')
+data.setCell(0, 2, 'com.qa.company.tests.EbayTest')
+data.setCell(0, 3, 108);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'amazonTitleTest')
+data.setCell(1, 2, 'com.qa.company.tests.AmazonTest')
+data.setCell(1, 3, 87);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 129 ms</span>
+              <span class="suite-total-time">Total running time: 16 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -231,13 +267,40 @@ return data;
                 <span class="method-name">setUp(chrome, https://www.amazon.com)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.company.tests.EbayTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setUp(FIREFOX, https://www.ebay.com)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.company.tests.AmazonTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">amazonTitleTest</span>
-                <span class="method-start">6651 ms</span>
+                <span class="method-start">15522 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.company.tests.EbayTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">eBayTitleTest</span>
+                <span class="method-start">15522 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.company.tests.AmazonTest</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">6999 ms</span>
+                <span class="method-start">15856 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.company.tests.EbayTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">15856 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
