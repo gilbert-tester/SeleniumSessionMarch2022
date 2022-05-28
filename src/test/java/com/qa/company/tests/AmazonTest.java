@@ -2,6 +2,7 @@ package com.qa.company.tests;
 
 import org.testng.annotations.Test;
 
+import com.qa.company.constant.Constant;
 import com.qa.company.drivermanager.DriverManager;
 
 import org.testng.Assert;
@@ -16,7 +17,8 @@ public class AmazonTest extends DriverManager{
 		String actual = driver.getTitle();
 
 		System.out.println("Page title is " + actual);
-		Assert.assertEquals(actual, expected, "Wrong title");
+		System.out.println(Constant.PAGE_TITLE_IS + actual);
+		Assert.assertEquals(actual, expected,Constant.WRONG_TITLE );
 
 		System.out.println("Page title is " + actual);
 
