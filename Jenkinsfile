@@ -1,25 +1,18 @@
-pipeline 
-{
-    agent any
-    
-    tools{
-    	maven 'maven'
-        }
-
-           
+pipeline { 
+agent any 
+    stages { 
         
-        stage("Deploy to QA"){
+        stage ('Build') { 
             steps{
-                echo("deploy to qa")
+                echo "Building"
+
             }
         }
-                
-        stage('Regression Automation Test') {
+        
+        stage('Test') {
             steps {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-                    git 'https://github.com/gilbert-tester/SeleniumSessionMarch2022.git'
                     sh "mvn clean install"
-                    
                 }
             }
         }
@@ -52,9 +45,8 @@ pipeline
             }
         }
         
-        stage("Deploy to PROD"){
-            steps{
-                echo("deploy to PROD")
-            }
-        }
+        
+        
     }
+
+ }
