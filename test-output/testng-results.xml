@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="16649" started-at="2022-05-23T17:25:14 PDT" finished-at="2022-05-23T17:25:30 PDT">
+  <suite name="Suite" duration-ms="11165" started-at="2022-05-23T20:02:45 PDT" finished-at="2022-05-23T20:02:57 PDT">
     <groups>
     </groups>
-    <test name="Amazon Test" duration-ms="7678" started-at="2022-05-23T17:25:14 PDT" finished-at="2022-05-23T17:25:21 PDT">
+    <test name="Amazon Test" duration-ms="11165" started-at="2022-05-23T20:02:45 PDT" finished-at="2022-05-23T20:02:57 PDT">
       <class name="com.qa.company.tests.AmazonTest">
-        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:com.qa.company.tests.AmazonTest@1931d99]" name="setUp" is-config="true" duration-ms="6854" started-at="2022-05-23T17:25:14 PDT" finished-at="2022-05-23T17:25:21 PDT">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:com.qa.company.tests.AmazonTest@1a3e5f23]" name="setUp" is-config="true" duration-ms="7504" started-at="2022-05-23T20:02:45 PDT" finished-at="2022-05-23T20:02:53 PDT">
           <params>
             <param index="0">
               <value>
@@ -23,35 +23,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="amazonTitleTest()[pri:1, instance:com.qa.company.tests.AmazonTest@1931d99]" name="amazonTitleTest" duration-ms="318" started-at="2022-05-23T17:25:21 PDT" finished-at="2022-05-23T17:25:21 PDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- amazonTitleTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.company.tests.AmazonTest@1931d99]" name="tearDown" is-config="true" duration-ms="262" started-at="2022-05-23T17:25:21 PDT" finished-at="2022-05-23T17:25:21 PDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.qa.company.tests.AmazonTest -->
-    </test> <!-- Amazon Test -->
-    <test name="Ebay Test" duration-ms="8386" started-at="2022-05-23T17:25:22 PDT" finished-at="2022-05-23T17:25:30 PDT">
-      <class name="com.qa.company.tests.EbayTest">
-        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:com.qa.company.tests.EbayTest@47547132]" name="setUp" is-config="true" duration-ms="5781" started-at="2022-05-23T17:25:22 PDT" finished-at="2022-05-23T17:25:28 PDT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[FIREFOX]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[https://www.ebay.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="eBayTitleTest()[pri:1, instance:com.qa.company.tests.EbayTest@47547132]" name="eBayTitleTest" duration-ms="11" started-at="2022-05-23T17:25:28 PDT" finished-at="2022-05-23T17:25:28 PDT">
+        <test-method status="FAIL" signature="amazonTitleTest()[pri:1, instance:com.qa.company.tests.AmazonTest@1a3e5f23]" name="amazonTitleTest" duration-ms="575" started-at="2022-05-23T20:02:53 PDT" finished-at="2022-05-23T20:02:54 PDT">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[Wrong title expected [Amazon.com. Spend less. Smile more.] but found [Electronics, Cars, Fashion, Collectibles & More | eBay]]]>
@@ -63,7 +35,7 @@ at org.testng.Assert.failNotEquals(Assert.java:1037)
 at org.testng.Assert.assertEqualsImpl(Assert.java:140)
 at org.testng.Assert.assertEquals(Assert.java:122)
 at org.testng.Assert.assertEquals(Assert.java:629)
-at com.qa.company.tests.EbayTest.eBayTitleTest(EbayTest.java:21)
+at com.qa.company.tests.AmazonTest.amazonTitleTest(AmazonTest.java:19)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -80,29 +52,24 @@ at java.util.ArrayList.forEach(ArrayList.java:1259)
 at org.testng.TestRunner.privateRun(TestRunner.java:764)
 at org.testng.TestRunner.run(TestRunner.java:585)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-at org.testng.TestNG.runSuites(TestNG.java:1069)
-at org.testng.TestNG.run(TestNG.java:1037)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:66)
+at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+at java.lang.Thread.run(Thread.java:750)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- eBayTitleTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.company.tests.EbayTest@47547132]" name="tearDown" is-config="true" duration-ms="932" started-at="2022-05-23T17:25:29 PDT" finished-at="2022-05-23T17:25:30 PDT">
+        </test-method> <!-- amazonTitleTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.company.tests.AmazonTest@1a3e5f23]" name="tearDown" is-config="true" duration-ms="918" started-at="2022-05-23T20:02:56 PDT" finished-at="2022-05-23T20:02:57 PDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.qa.company.tests.EbayTest -->
-    </test> <!-- Ebay Test -->
+      </class> <!-- com.qa.company.tests.AmazonTest -->
+    </test> <!-- Amazon Test -->
   </suite> <!-- Suite -->
 </testng-results>
