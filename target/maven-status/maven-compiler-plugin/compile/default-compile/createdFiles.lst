@@ -10,6 +10,7 @@ com/qa/company/advanceSelenium/RightClickConcept.class
 com/qa/company/testNG/TestNGFeatures.class
 com/qa/company/advanceSelenium/GetTotalImages.class
 com/qa/company/testNG/SoftAssertDemo.class
+com/qa/company/cloud/SauceDemoTest.class
 com/qa/company/advanceSelenium/PropertiesDemo.class
 com/qa/company/locators/LocatorStrategies.class
 com/qa/company/wait/ExplicitWait_WebDriverWait2.class

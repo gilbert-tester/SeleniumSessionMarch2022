@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="18.78" tests="2" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="16.578" tests="2" errors="0" skipped="0" failures="2">
   <properties>
     <property name="java.specification.version" value="15"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -56,6 +56,90 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="59.0"/>
   </properties>
-  <testcase name="amazonTitleTest" classname="com.qa.company.tests.AmazonTest" time="0.258"/>
-  <testcase name="eBayTitleTest" classname="com.qa.company.tests.EbayTest" time="0.26"/>
+  <testcase name="eBayTitleTest" classname="com.qa.company.tests.EbayTest" time="3.195">
+    <failure message="Wrong title expected [Amazon.com. Spend less. Smile more.] but found [Electronics, Cars, Fashion, Collectibles &amp; More | eBay]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Wrong title expected [Amazon.com. Spend less. Smile more.] but found [Electronics, Cars, Fashion, Collectibles & More | eBay]
+	at com.qa.company.tests.EbayTest.eBayTitleTest(EbayTest.java:21)
+]]></failure>
+    <system-out><![CDATA[...
+... TestNG 7.4.0 by Cédric Beust (cedric@beust.com)
+...
+
+This is onStart method
+This is onStart method
+Test Suite started!
+Test Suite started!
+I am in onStart method Amazon Test
+I am in onStart method Ebay Test
+Browser name is : chrome
+Browser name is : FIREFOX
+This is onTestStart method
+This is onTestStart method
+amazonTitleTest started!
+eBayTitleTest started!
+I am in onTestStart method amazonTitleTest start
+I am in onTestStart method eBayTitleTest start
+Page title is Electronics, Cars, Fashion, Collectibles & More | eBay
+This is onTestFailure method
+Page title is Electronics, Cars, Fashion, Collectibles & More | eBay
+Page title is Electronics, Cars, Fashion, Collectibles & More | eBay
+This is onTestFailure method
+eBayTitleTest failed!
+I am in onTestFailure method eBayTitleTest failed
+amazonTitleTest failed!
+Screenshot captured for test case:eBayTitleTest
+I am in onTestFailure method amazonTitleTest failed
+Screenshot captured for test case:amazonTitleTest
+]]></system-out>
+    <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+1653833297662	geckodriver	INFO	Listening on 127.0.0.1:25088
+Starting ChromeDriver 102.0.5005.61 (0e59bcc00cc4985ce39ad31c150065f159d95ad3-refs/branch-heads/5005@{#819}) on port 39252
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+1653833298109	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/gt/8tjw9sj151qcwjz557d8y3s40000gn/T/rust_mozprofilePznHQP"
+1653833298836	Marionette	INFO	Marionette enabled
+2022-05-29 07:08:20.029 firefox-bin[2267:59197] Warning: Expected min height of view: (<NSButton: 0x12d9b1000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-05-29 07:08:20.030 firefox-bin[2267:59197] Warning: Expected min height of view: (<NSButton: 0x12d9abc00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-05-29 07:08:20.032 firefox-bin[2267:59197] Warning: Expected min height of view: (<NSButton: 0x12d9ac400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-05-29 07:08:20.033 firefox-bin[2267:59197] Warning: Expected min height of view: (<NSButton: 0x12d9ae800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-05-29 07:08:20.034 firefox-bin[2267:59197] Warning: Expected min height of view: (<NSButton: 0x12d9af400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-05-29 07:08:20.035 firefox-bin[2267:59197] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x12d9af800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2022-05-29 07:08:20.037 firefox-bin[2267:59197] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x12dca9c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+May 29, 2022 7:08:20 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/gt/8tjw9sj151qcwjz557d8y3s40000gn/T/rust_mozprofilePznHQP/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 241"  data: no]
+1653833301940	Marionette	INFO	Listening on port 56454
+Read port: 56454
+1653833302064	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+May 29, 2022 7:08:22 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+JavaScript warning: https://src.ebay-us.com/8AOt9Lyog9cGG8z8?8073271c07074a22=2sj3nLN4ybNLww6wMc7N70LNhCTr9q5EnGuBAcB-mei976BPyDKzw1iYEJVFKe3-_76EwbcTOnspdI9Ou2hEjwArFQ6FkG8Ibk8-uk6t4Ki4sDadQ_8YiKdbEH9kSl3_QRhugNH79vCqDN0X9gJ0Q-o5PLpYGCG8l0r4IRuxKsffhI6bQJQlCGEA7TN4eUfo_GaCevw2YLzHBh7BvmnBIeQ&jb=3634242662716f753d4561632668716f3f4f63612732304d512730325a25303231302c313d246a73627d3d46697067666d7a246871623d446b7067646d78273030393b, line 612: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://src.ebay-us.com/8AOt9Lyog9cGG8z8?8073271c07074a22=2sj3nLN4ybNLww6wMc7N70LNhCTr9q5EnGuBAcB-mei976BPyDKzw1iYEJVFKe3-_76EwbcTOnspdI9Ou2hEjwArFQ6FkG8Ibk8-uk6t4Ki4sDadQ_8YiKdbEH9kSl3_QRhugNH79vCqDN0X9gJ0Q-o5PLpYGCG8l0r4IRuxKsffhI6bQJQlCGEA7TN4eUfo_GaCevw2YLzHBh7BvmnBIeQ&jb=3634242662716f753d4561632668716f3f4f63612732304d512730325a25303231302c313d246a73627d3d46697067666d7a246871623d446b7067646d78273030393b, line 612: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/BlV8lHKGnk03wUyhHWlg9fV4CiK26Crs8dLo7bQbDuA.js line 2 > eval line 3709 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+]]></system-err>
+  </testcase>
+  <testcase name="amazonTitleTest" classname="com.qa.company.tests.AmazonTest" time="5.456">
+    <failure message="Wrong title expected [Amazon.com. Spend less. Smile more.] but found [Electronics, Cars, Fashion, Collectibles &amp; More | eBay]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Wrong title expected [Amazon.com. Spend less. Smile more.] but found [Electronics, Cars, Fashion, Collectibles & More | eBay]
+	at com.qa.company.tests.AmazonTest.amazonTitleTest(AmazonTest.java:21)
+]]></failure>
+    <system-out><![CDATA[This is onFinish method
+Test Suite is ending!
+]]></system-out>
+    <system-err><![CDATA[1653833309012	Marionette	INFO	Stopped listening on port 56454
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PProfilerParent] Error: RunMessage(msgname=PProfiler::Reply_Stop) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+log4j:WARN No appenders could be found for logger (freemarker.cache).
+log4j:WARN Please initialize the log4j system properly.
+]]></system-err>
+  </testcase>
 </testsuite>

@@ -1,4 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.78 s - in TestSuite
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 16.578 s <<< FAILURE! - in TestSuite
+eBayTitleTest(com.qa.company.tests.EbayTest)  Time elapsed: 3.195 s  <<< FAILURE!
+java.lang.AssertionError: Wrong title expected [Amazon.com. Spend less. Smile more.] but found [Electronics, Cars, Fashion, Collectibles & More | eBay]
+	at com.qa.company.tests.EbayTest.eBayTitleTest(EbayTest.java:21)
+
+amazonTitleTest(com.qa.company.tests.AmazonTest)  Time elapsed: 5.456 s  <<< FAILURE!
+java.lang.AssertionError: Wrong title expected [Amazon.com. Spend less. Smile more.] but found [Electronics, Cars, Fashion, Collectibles & More | eBay]
+	at com.qa.company.tests.AmazonTest.amazonTitleTest(AmazonTest.java:21)
+

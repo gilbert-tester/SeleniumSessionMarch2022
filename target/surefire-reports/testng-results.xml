@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-28T08:17:42 PDT" name="Suite" finished-at="2022-05-28T08:17:58 PDT" duration-ms="16117">
+  <suite started-at="2022-05-29T07:08:16 PDT" name="Suite" finished-at="2022-05-29T07:08:30 PDT" duration-ms="14011">
     <groups>
     </groups>
-    <test started-at="2022-05-28T08:17:42 PDT" name="Ebay Test" finished-at="2022-05-28T08:17:58 PDT" duration-ms="16117">
+    <test started-at="2022-05-29T07:08:16 PDT" name="Ebay Test" finished-at="2022-05-29T07:08:30 PDT" duration-ms="13814">
       <class name="com.qa.company.tests.EbayTest">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.qa.company.tests.EbayTest@238bfd6c]" started-at="2022-05-28T08:17:42 PDT" name="setUp" finished-at="2022-05-28T08:17:57 PDT" duration-ms="15447" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.qa.company.tests.EbayTest@58860997]" started-at="2022-05-29T07:08:16 PDT" name="setUp" finished-at="2022-05-29T07:08:24 PDT" duration-ms="8251" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,19 +23,57 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="eBayTitleTest()[pri:1, instance:com.qa.company.tests.EbayTest@238bfd6c]" started-at="2022-05-28T08:17:58 PDT" name="eBayTitleTest" finished-at="2022-05-28T08:17:58 PDT" duration-ms="108" status="PASS">
+        <test-method signature="eBayTitleTest()[pri:1, instance:com.qa.company.tests.EbayTest@58860997]" started-at="2022-05-29T07:08:24 PDT" name="eBayTitleTest" finished-at="2022-05-29T07:08:25 PDT" duration-ms="315" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Wrong title expected [Amazon.com. Spend less. Smile more.] but found [Electronics, Cars, Fashion, Collectibles & More | eBay]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Wrong title expected [Amazon.com. Spend less. Smile more.] but found [Electronics, Cars, Fashion, Collectibles & More | eBay]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at com.qa.company.tests.EbayTest.eBayTitleTest(EbayTest.java:21)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:832)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- eBayTitleTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.company.tests.EbayTest@238bfd6c]" started-at="2022-05-28T08:17:58 PDT" name="tearDown" finished-at="2022-05-28T08:17:58 PDT" duration-ms="245" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.company.tests.EbayTest@58860997]" started-at="2022-05-29T07:08:28 PDT" name="tearDown" finished-at="2022-05-29T07:08:30 PDT" duration-ms="2035" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.qa.company.tests.EbayTest -->
     </test> <!-- Ebay Test -->
-    <test started-at="2022-05-28T08:17:42 PDT" name="Amazon Test" finished-at="2022-05-28T08:17:58 PDT" duration-ms="16116">
+    <test started-at="2022-05-29T07:08:16 PDT" name="Amazon Test" finished-at="2022-05-29T07:08:30 PDT" duration-ms="14011">
       <class name="com.qa.company.tests.AmazonTest">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.qa.company.tests.AmazonTest@3f9f71ff]" started-at="2022-05-28T08:17:42 PDT" name="setUp" finished-at="2022-05-28T08:17:57 PDT" duration-ms="15477" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.qa.company.tests.AmazonTest@27e5b378]" started-at="2022-05-29T07:08:16 PDT" name="setUp" finished-at="2022-05-29T07:08:24 PDT" duration-ms="8215" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -51,11 +89,49 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="amazonTitleTest()[pri:1, instance:com.qa.company.tests.AmazonTest@3f9f71ff]" started-at="2022-05-28T08:17:58 PDT" name="amazonTitleTest" finished-at="2022-05-28T08:17:58 PDT" duration-ms="87" status="PASS">
+        <test-method signature="amazonTitleTest()[pri:1, instance:com.qa.company.tests.AmazonTest@27e5b378]" started-at="2022-05-29T07:08:24 PDT" name="amazonTitleTest" finished-at="2022-05-29T07:08:25 PDT" duration-ms="357" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Wrong title expected [Amazon.com. Spend less. Smile more.] but found [Electronics, Cars, Fashion, Collectibles & More | eBay]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Wrong title expected [Amazon.com. Spend less. Smile more.] but found [Electronics, Cars, Fashion, Collectibles & More | eBay]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at com.qa.company.tests.AmazonTest.amazonTitleTest(AmazonTest.java:21)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:832)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- amazonTitleTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.company.tests.AmazonTest@3f9f71ff]" started-at="2022-05-28T08:17:58 PDT" name="tearDown" finished-at="2022-05-28T08:17:58 PDT" duration-ms="245" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.company.tests.AmazonTest@27e5b378]" started-at="2022-05-29T07:08:30 PDT" name="tearDown" finished-at="2022-05-29T07:08:30 PDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
